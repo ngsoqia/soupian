@@ -1,0 +1,10 @@
+# BEGIN WinBlog
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?$1 [L]
+RewriteCond %{HTTP_HOST} ^1974t.com 
+RewriteRule ^(.*)$ http://www.1974t.com/$1 [R=permanent,L]
+</IfModule>
+# END WinBlog
